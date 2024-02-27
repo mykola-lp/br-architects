@@ -1,0 +1,68 @@
+/*==============================================================
+  # Variables.
+==============================================================*/
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --light-grey: #CCCCCC;
+}
+
+/*==============================================================
+  # General.
+==============================================================*/
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Verdana", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*==============================================================
+  # Top Bar.
+==============================================================*/
+#br-top .br-bar {
+  padding: 10px 20px;
+  overflow: hidden;
+  letter-spacing: 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+#br-top .br-bar .br-bar-item {
+  display: block;
+  padding: 8px 16px;
+  float: left;
+}
+
+#br-top .br-bar .br-nav {
+  float: right;
+}
+
+#br-top .br-bar li {
+  display: inline;
+}
+
+#br-top .br-bar .br-button:hover {
+  background-color: var(--light-grey);
+}
