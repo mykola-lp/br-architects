@@ -4,6 +4,7 @@
 :root {
   --black: #000000;
   --white: #FFFFFF;
+  --white-smoke: #F1F1F1;
   --light-grey: #CCCCCC;
 }
 
@@ -30,23 +31,38 @@ a:hover {
   color: var(--black);
 }
 
+img {
+  border-style: none;
+  vertical-align: middle;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
 }
 
 /*==============================================================
   # Top Bar.
 ==============================================================*/
+#top-bar {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
 #top-bar .navbar {
   padding: 10px 20px;
   overflow: hidden;
   letter-spacing: 4px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: var(--black);
+  background-color: var(--white);
 }
 
 #top-bar .navbar .site-name,
@@ -67,4 +83,43 @@ h6 {
 #top-bar .navbar .site-name:hover,
 #top-bar .navbar .main-nav li [class^="item-"]:hover {
   background-color: var(--light-grey);
+}
+
+/*==============================================================
+  # Header Section.
+==============================================================*/
+#header {
+  max-width: 1500px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 4px;
+}
+
+#header .site-banner {
+  max-width: 100%;
+  height: auto;
+}
+
+#header .branding {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 16px;
+  text-align: center;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%); /* Safari, Chrome, Opera */
+  -ms-transform: translate(-50%,-50%);     /* Internet Explorer */
+  -moz-transform: translate(-50%,-50%);    /* Mozilla Firefox */
+}
+
+#header .branding .br-suffix {
+  padding: 8px 16px;
+  color: var(--white);
+  background-color: var(--black);
+  opacity: 0.75;
+}
+
+#header .branding .br-prefix {
+  color: var(--white-smoke);
 }
