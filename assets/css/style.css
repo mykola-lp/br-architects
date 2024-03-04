@@ -261,3 +261,42 @@ section.offer .ofr-row .ofr-col-4 {
   color: var(--white);
   background-color: var(--black);
 }
+
+/*==============================================================
+  # Projects Section.
+==============================================================*/
+#project {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1580px;
+  padding-bottom: 64px;
+}
+
+#project .prj-heading {
+  font-size: 24px;
+  padding: 64px 64px;
+}
+
+#project .prj-heading > span {
+  border-bottom: 6px solid var(--granite-gray);
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+#project [class^="prj-row-"] {
+  overflow: hidden;
+}
+
+#project [class^="prj-row-"] [class^="prj-col-"] {
+  width: calc(25%);
+  float: left;
+  padding: 7px;
+}
+
+#project [class^="prj-row-"] [class^="prj-col-"] .prj-display {
+  position: absolute;
+  padding: 8px 16px;
+  color: var(--white);
+  background-color: var(--black);
+}
+
