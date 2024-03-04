@@ -11,7 +11,7 @@
     <!-- Template Main JavaScript File -->
     <script src="assets/js/main.js" defer></script>
 
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -109,39 +109,57 @@
       <div class="prj-row-1">
         <div class="prj-col-1">
           <div class="prj-display">Summer House</div>
-          <img src="assets/img/projects/house-1.jpg" alt="Summer House">
+          <img src="assets/img/projects/house-1.jpg" class="house-design" alt="Summer House">
         </div>
         <div class="prj-col-2">
           <div class="prj-display">Brick House</div>
-          <img src="assets/img/projects/house-2.jpg" alt="Brick House">
+          <img src="assets/img/projects/house-2.jpg" class="house-design" alt="Brick House">
         </div>
         <div class="prj-col-3">
           <div class="prj-display">Renovated</div>
-          <img src="assets/img/projects/house-3.jpg" alt="Renovated House">
+          <img src="assets/img/projects/house-3.jpg" class="house-design" alt="Renovated House">
         </div>
         <div class="prj-col-4">
           <div class="prj-display">Barn House</div>
-          <img src="assets/img/projects/house-4.jpg" alt="Barn House">
+          <img src="assets/img/projects/house-4.jpg" class="house-design" alt="Barn House">
         </div>
       </div>
       <div class="prj-row-2">
         <div class="prj-col-5">
           <div class="prj-display">Barn House</div>
-          <img src="assets/img/projects/house-4.jpg" alt="Barn House">
+          <img src="assets/img/projects/house-4.jpg" class="house-design" alt="Barn House">
         </div>
         <div class="prj-col-6">
           <div class="prj-display">Renovated</div>
-          <img src="assets/img/projects/house-3.jpg" alt="Renovated House">
+          <img src="assets/img/projects/house-3.jpg" class="house-design" alt="Renovated House">
         </div>
         <div class="prj-col-7">
           <div class="prj-display">Brick House</div>
-          <img src="assets/img/projects/house-2.jpg" alt="Brick House">
+          <img src="assets/img/projects/house-2.jpg" class="house-design" alt="Brick House">
         </div>
         <div class="prj-col-8">
           <div class="prj-display">Summer House</div>
-          <img src="assets/img/projects/house-1.jpg" alt="Summer House">
+          <img src="assets/img/projects/house-1.jpg" class="house-design" alt="Summer House">
         </div>
       </div>
+      <!-- Project with Slideshow BEGIN -->
+      <div id="prj-popup" class="prj-popup">
+        <!-- @todo  create a popup window with a house design inside for each image. -->
+        <span class="close">&times;</span>
+        <div class="prj-popup-content">
+          <div class="prj-slide">
+            <img src="assets/img/slider/atrium.jpg" alt="Design of room one">
+          </div>
+          <div class="prj-slide">
+            <img src="assets/img/slider/bedroom.jpg" alt="Design of room two">
+          </div>
+          <div class="prj-slide">
+            <img src="assets/img/slider/diningroom.jpg" alt="Design of room three">
+          </div>
+          <a class="prj-btn" onclick="plusDivs(1)">Take Tour <i class="fa fa-angle-right"></i></a>
+        </div>
+      </div>
+      <!-- Project with Slideshow END -->
     </section>
     <!-- Projects Section END -->
   </body>
