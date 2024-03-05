@@ -356,3 +356,26 @@ section.offer .ofr-row .ofr-col-4 {
   color: var(--black);
   background-color: var(--white-smoke);
 }
+
+/*==============================================================
+  # Statistic Section.
+==============================================================*/
+section.block-statistic .bl-row {
+  color: var(--white);
+  background-color: var(--granite-gray);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  overflow: hidden;
+}
+
+section.block-statistic .bl-row [class^="bl-col-"] {
+  width: calc(25%);
+  float: left;
+  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+section.block-statistic .bl-row [class^="bl-col-"] > span {
+  font-size: 24px;
+}
