@@ -58,3 +58,29 @@ function showDivs(n) {
     }
     x[slideIndex-1].style.display = "block";
 }
+
+// --------------------------------------------------------------------------
+
+// Toggle grid padding
+function toggleGridPadding() {
+    // @todo change: start screen with all images without padding,
+    //               after click on the button "Toggle" - add paddings
+    //               between photos amd person name with job title
+    //               under image.
+    var x = document.getElementById("t-grid");
+    if (x.className === "gr-row") {
+        x.className = "gr-row-padding";
+    } else {
+        x.className = x.className.replace("gr-row-padding", "gr-row");
+    }
+}
+
+// --------------------------------------------------------------------------
+
+// Modal Image Gallery
+function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+}

@@ -185,5 +185,48 @@
       </div>
     </section>
     <!-- Statistic END -->
+
+    <!-- Team BEGIN -->
+    <section id="team">
+      <div class="bg-img-2">
+        <span>Team</span>
+      </div>
+      <div class="toggle">
+        <p><button class="btn-toggle" onclick="toggleGridPadding()">Toggle</button></p>
+      </div>
+      <div class="grid-team">
+        <div class="gr-row" id="t-grid">
+          <div class="gr-col-1">
+            <img src="assets/img/team/team-person-1.jpeg" onclick="onClick(this)" alt="">
+            <!-- @todo add: name and job title under image. -->
+            <img src="assets/img/team/team-person-2.jpeg" onclick="onClick(this)" alt="">
+            <img src="assets/img/team/team-person-3.jpeg" onclick="onClick(this)" alt="">
+            <img src="assets/img/team/team-person-4.jpeg" onclick="onClick(this)" alt="">
+          </div>
+          <div class="gr-col-2">
+            <img src="assets/img/team/team-person-5.jpeg" onclick="onClick(this)" alt="">
+            <img src="assets/img/team/team-person-6.jpeg" onclick="onClick(this)" alt="">
+            <img src="assets/img/team/team-person-7.jpeg" onclick="onClick(this)" alt="">
+            <img src="assets/img/team/team-person-8.jpeg" onclick="onClick(this)" alt="">
+          </div>
+          <div class="gr-col-3">
+            <img src="assets/img/team/team-person-9.jpeg" onclick="onClick(this)" alt="">
+            <img src="assets/img/team/team-person-10.jpeg" onclick="onClick(this)" alt="">
+            <img src="assets/img/team/team-person-11.jpeg" onclick="onClick(this)" alt="">
+            <img src="assets/img/team/team-person-12.jpeg" onclick="onClick(this)" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- Modal for full size images on click-->
+      <div id="modal01" class="popup-modal" onclick="this.style.display='none'">
+        <!-- @todo add: name, job title, decr, social links and mail near(right) image. -->
+        <span class="close-button">×</span>
+        <div class="popup-modal-content">
+          <img id="img01">
+          <p id="caption"></p>
+        </div>
+      </div>
+    </section>
+    <!-- Team END -->
   </body>
 </html>
