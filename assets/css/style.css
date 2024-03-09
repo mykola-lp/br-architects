@@ -429,6 +429,7 @@ section.block-statistic .bl-row [class^="bl-col-"] > span {
   color: var(--black);
   background-color: var(--white-smoke);
   max-width: 1500px;
+  overflow: hidden;
   margin: 0 auto 64px auto;
   transition: margin-left .4s;
   filter: grayscale(50%);
@@ -503,3 +504,93 @@ section.block-statistic .bl-row [class^="bl-col-"] > span {
   margin: 50px auto;
   height: auto;
 }
+
+/*==============================================================
+  # Contact Section.
+==============================================================*/
+#contact {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+#contact > span {
+  display: block;
+  width: auto;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 30px;
+}
+
+#contact > p em {
+  opacity: 1;
+}
+
+#contact .social-icons {
+  width: calc(50%);
+  float: left;
+  font-size: 18px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+#contact .social-icons .fa {
+  width: 30px;
+}
+
+#contact .contact-form {
+  width: calc(50%);
+  float: left;
+  margin-bottom: 34px;
+}
+
+#contact .contact-form .fields [class^="field-"] > input,
+#contact .contact-form form input {
+  width: calc(50%);
+  float: left;
+  padding: 8px;
+  display: block;
+  border: 1px solid #ccc;
+  margin: 20px auto 0 auto;
+}
+
+#contact .contact-form form input[class="message"] {
+  width: 100%;
+}
+
+#contact .contact-form form > button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  float: right;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--black);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#contact .contact-form form > button:hover {
+  color: var(--black);
+  background-color: var(--light-grey);
+}
+
+#contact .contact-form form > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+/* @todo re-write styles: padding for contacts and map. */
+/*.company-location {}*/
