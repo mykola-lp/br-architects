@@ -9,6 +9,9 @@
   --light-grey: #CCCCCC;
   --gold-grey: #9E9E9E;
   --granite-gray: #616161;
+  --dark-khaki: #BDB76B;
+  --dark-cyan: #009688;
+  --light-steel-blue: #BaC6D9;
 }
 
 /*==============================================================
@@ -594,3 +597,152 @@ section.block-statistic .bl-row [class^="bl-col-"] > span {
 
 /* @todo re-write styles: padding for contacts and map. */
 /*.company-location {}*/
+
+/*==============================================================
+  # Footer Section.
+==============================================================*/
+#footer {
+  color: var(--white);
+  background-color: var(--black);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer .row {
+  padding: 1em 1em;
+  overflow: hidden;
+}
+
+#footer .wrapper .col {
+  padding: 0 2em;
+  min-height: 15em;
+  float: left;
+}
+
+#footer .social {
+  width: 20%;
+}
+
+#footer .link {
+  width: 40%;
+}
+
+#footer .subscribe {
+  width: 40%;
+}
+
+#footer h3 {
+  width: 100%;
+  text-align: left;
+  color: var(--white);
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+
+#footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+#footer li:not(:first-child) {
+  margin-top: 0.8em;
+}
+
+#footer ul li a {
+  color: var(--light-grey);
+}
+
+#footer input,
+#footer button {
+  font-size: 1em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+#footer button {
+  color: var(--white-smoke);
+  background-color: var(--dark-khaki);
+}
+
+#footer div.social-link {
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.4em;
+  flex-direction: row;
+  margin-top: 0.5em;
+}
+
+#footer .social-link i {
+  color: var(--light-steel-blue);
+}
+
+/* Go To Top */
+#footer .scroll-back {
+  position: relative;
+  z-index: 1;
+  float: right;
+}
+
+#footer .scroll-back > span {
+  display: none;
+  padding: 8px 16px;
+  background-color: var(--dark-cyan);
+}
+
+#footer .scroll-back:hover > span {
+  display: inline-block;
+}
+
+#footer .scroll-back a.btn-go-top {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--black);
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#footer .scroll-back a.btn-go-top > i {
+  font-size: 1.5em;
+}
+
+/* Footer Menu */
+#foot .copyright {
+  padding: 0.3em 1em;
+  background-color: var(--black);
+}
+
+#footer .footer-menu {
+  float: left;
+  margin-top: 10px;
+}
+
+#footer .footer-menu a {
+  color: var(--light-grey);
+  padding: 6px;
+}
+
+#footer .footer-menu a:hover,
+#footer .social-link i:hover {
+  color: var(--gold-grey);
+}
+
+#footer .copyright p {
+  font-size: 0.9em;
+  text-align: right;
+}
