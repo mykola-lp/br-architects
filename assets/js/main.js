@@ -84,3 +84,36 @@ function onClick(element) {
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
 }
+
+// --------------------------------------------------------------------------
+
+// Get the button
+var scrollToTopBtn = document.getElementById("btn-go-top");
+
+// Function to show or hide the "Go To Top" button based on the page position
+function scrollFunction() {
+    // If the page is scrolled more than 20 pixels from the top
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        // Show the button
+        scrollToTopBtn.style.display = "inline-block";
+    } else {
+        // Otherwise, hide the button
+        scrollToTopBtn.style.display = "none";
+    }
+}
+
+// Add scroll event listener to call the scrollFunction
+window.onscroll = function() {
+    scrollFunction();
+};
+
+// Function to scroll to the top when the button is clicked
+function scrollToTop() {
+    // For Safari
+    document.body.scrollTop = 0;
+    // For Chrome, Firefox, IE, and Opera
+    document.documentElement.scrollTop = 0;
+}
+
+// Add event listener for the "Go To Top" button
+scrollToTopBtn.addEventListener("click", scrollToTop);
