@@ -271,8 +271,27 @@ section.offer .ofr-row .ofr-col-4 {
 #project {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1580px;
   padding-bottom: 64px;
+}
+
+#project .bg-img-1 {
+  background: linear-gradient(to top, #6b171733, #2b1b37cc), url("../../assets/img/bg-image-1.jpg") fixed center no-repeat;
+  background-size: cover;
+  min-height: 400px;
+  position: relative;
+  opacity: 0.75;
+}
+
+#project .bg-img-1 > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: var(--white);
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 #project .prj-heading {
@@ -281,13 +300,15 @@ section.offer .ofr-row .ofr-col-4 {
 }
 
 #project .prj-heading > span {
-  border-bottom: 6px solid var(--granite-gray);
   padding-top: 16px;
   padding-bottom: 16px;
 }
 
 #project [class^="prj-row-"] {
+  margin-top: 64px;
   overflow: hidden;
+  margin-left: 164px;
+  margin-right: 164px;
 }
 
 #project [class^="prj-row-"] [class^="prj-col-"] {
@@ -363,6 +384,43 @@ section.offer .ofr-row .ofr-col-4 {
 #project .prj-popup-content .prj-btn:hover {
   color: var(--black);
   background-color: var(--white-smoke);
+}
+
+/*==============================================================
+  # Good At Section.
+==============================================================*/
+section.good-at {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  padding-bottom: 64px;
+}
+
+section.good-at .heading {
+  font-size: 24px;
+  padding: 24px 24px;
+}
+
+section.good-at .heading > span {
+  border-bottom: 6px solid var(--granite-gray);
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+section.good-at > span {
+  letter-spacing: 10px;
+}
+
+section.good-at .line {
+  color: #000;
+  background-color: #f1f1f1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+section.good-at .line > div {
+  color: #fff;
+  background-color: #616161;
 }
 
 /*==============================================================
