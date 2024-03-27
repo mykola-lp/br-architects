@@ -1,3 +1,18 @@
+// Defines two functions: openNav() and closeNav() for full and mobile screens.
+function openNav() {
+    var navMenu = document.querySelector(".nav-menu");
+    navMenu.classList.add("active");
+    document.body.classList.add("menu-open");
+}
+
+function closeNav() {
+    var navMenu = document.querySelector(".nav-menu");
+    navMenu.classList.remove("active");
+    document.body.classList.remove("menu-open");
+}
+
+// --------------------------------------------------------------------------
+
 // Find the image and popup.
 const popupImage = document.querySelector('.team-photo');
 const popup = document.getElementById('image-popup');
