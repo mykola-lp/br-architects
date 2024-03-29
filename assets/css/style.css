@@ -18,13 +18,13 @@
   # General.
 ==============================================================*/
 * {
-  margin: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   font-family: "Verdana", sans-serif;
-  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -67,113 +67,126 @@ ul {
   text-align: justify;
 }
 
+/* ----- LAYOUT ----- */
+header,
+section,
+footer {
+  padding: 1.25em 0; /* font-size(= html, is parent element) = 16px, 16px * 1.25em = 20px */
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
 /*==============================================================
   # Top Bar (Header).
 ==============================================================*/
-.header {
+.top-bar {
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  margin: 0 auto;
   z-index: 1;
   background-color: var(--white);
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+              0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-.header .container {
+.top-bar .flex {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 20px 25px;
+  align-items: center;
+  padding: 0 3.125em 0;
   letter-spacing: 4px;
 }
 
-.header .logo {
+/* ----- NAVIGATION ----- */
+.logo,
+.menu ul {
   font-size: 1rem;
 }
 
-.header .nav-menu {
+.logo a:hover,
+.menu ul > li a:hover {
+  /*padding: 1em;*/
+  /*background-color: var(--light-grey);*/
+}
+
+.menu {
   margin-left: auto;
 }
 
-.header .nav-menu ul {
-  display: flex;
-  flex-direction: row;
-  gap: 1.6rem;
-  font-size: 1rem;
+.menu ul > li {
+  display: inline;
+  padding: 1em;
 }
 
-.header .hamburger-menu,
-.header a.btn-close {
+span.btn-open,
+.menu .btn-close {
   display: none;
-  cursor: pointer;
 }
 
-@media (max-width: 700px) {
-  .nav-menu .btn-close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    font-size: 30px;
-    color: var(--white);
-    font-weight: bold;
-  }
-
-  .nav-menu a.btn-close {
-    display: block;
-    font-size: 30px;
-  }
-
-  .header .nav-menu ul {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .header .hamburger-menu {
+/* ----- MEDIA QUERIES ----- */
+@media (max-width: 1024px), (max-width: 640px) {
+  span.btn-open,
+  .menu .btn-close {
     display: block;
   }
 
-  .header .nav-menu {
+  .menu {
     position: fixed;
+    z-index: 1;
     top: 0;
-    right: -100%;
-    bottom: 0;
-    width: 100%;
-    padding-top: 6rem;
-    align-items: center;
-    text-align: center;
+    left: 0;
+    width: 0;
+    height: 100%;
     background-color: var(--black);
-    opacity: 0.9;
-    transition: 0.3s ease-in-out;
-  }
-
-  .nav-menu li > a {
-    color: var(--white);
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  .nav-menu a:hover,
-  .nav-menu a:focus {
-    color: var(--light-grey);
-  }
-
-  .header .nav-menu.active {
-    right: 0;
-  }
-
-  body {
     overflow-x: hidden;
-    overflow-y: hidden;
+    transition: 0.5s;
+  }
+
+  .menu ul {
+    text-align: center;
+  }
+
+  .menu ul a {
+    display: block;
+    padding: 8px;
+    transition: 0.3s;
+    color: var(--light-grey);
+    font-size: 36px;
+  }
+
+  .menu ul a:hover,
+  .menu ul a:focus {
+    color: var(--white-smoke);
+  }
+
+  .menu .btn-close {
+    position: absolute;
+    top: 0;
+    right: 45px;
+    font-size: 60px;
+  }
+}
+
+/* ----- MOBILE ----- */
+@media (max-width: 640px) {
+  .menu {
+    opacity: 0.9;
+  }
+
+  .top-bar .btn-open {
+    font-size: 40px;
+    cursor: pointer;
   }
 }
 
 /*==============================================================
   # Header Section.
 ==============================================================*/
-#header {
+#banner {
   max-width: 1500px;
   position: relative;
   margin-left: auto;
@@ -181,12 +194,12 @@ ul {
   letter-spacing: 4px;
 }
 
-#header .site-banner {
+#banner .site-banner {
   max-width: 100%;
   height: auto;
 }
 
-#header .branding {
+#banner .branding {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -197,14 +210,14 @@ ul {
   -moz-transform: translate(-50%,-50%);    /* Mozilla Firefox */
 }
 
-#header .branding .br-suffix {
+#banner .branding .br-suffix {
   padding: 8px 16px;
   color: var(--white);
   background-color: var(--black);
   opacity: 0.75;
 }
 
-#header .branding .br-prefix {
+#banner .branding .br-prefix {
   color: var(--white-smoke);
 }
 
