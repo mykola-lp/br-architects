@@ -1,14 +1,45 @@
 // Defines two functions: openNav() and closeNav() for full and mobile screens.
+var navMenu = document.querySelector(".menu");
+function openNavMobile() {
+    navMenu.classList.add("open");
+    navMenu.style.width = "100%";
+}
+
+function closeNavMobile() {
+    navMenu.classList.remove("open");
+    navMenu.style.width = "0";
+}
+
+function openNavDesktop() {
+    navMenu.classList.add("open");
+    navMenu.style.width = "250px";
+    document.querySelector("body").style.marginLeft = "250px";
+}
+
+function closeNavDesktop() {
+    navMenu.classList.remove("open");
+    navMenu.style.width = "0";
+    document.querySelector("body").style.marginLeft= "0";
+}
+
 function openNav() {
-    var navMenu = document.querySelector(".nav-menu");
-    navMenu.classList.add("active");
-    document.body.classList.add("menu-open");
+    var screenWidth = window.innerWidth;
+
+    if (screenWidth >= 641 && screenWidth <= 1024) {
+        openNavDesktop();
+    } else {
+        openNavMobile();
+    }
 }
 
 function closeNav() {
-    var navMenu = document.querySelector(".nav-menu");
-    navMenu.classList.remove("active");
-    document.body.classList.remove("menu-open");
+    var screenWidth = window.innerWidth;
+
+    if (screenWidth <= 640) {
+        closeNavMobile();
+    } else {
+        closeNavDesktop();
+    }
 }
 
 // --------------------------------------------------------------------------

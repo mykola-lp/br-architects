@@ -101,25 +101,14 @@ footer {
   letter-spacing: 4px;
 }
 
-/* ----- NAVIGATION ----- */
-.logo,
-.menu ul {
-  font-size: 1rem;
-}
-
-.logo a:hover,
-.menu ul > li a:hover {
-  /*padding: 1em;*/
-  /*background-color: var(--light-grey);*/
-}
-
+/* ----- Navigation. ----- */
 .menu {
   margin-left: auto;
 }
 
-.menu ul > li {
-  display: inline;
-  padding: 1em;
+.logo,
+.menu ul {
+  font-size: 1rem;
 }
 
 span.btn-open,
@@ -127,11 +116,32 @@ span.btn-open,
   display: none;
 }
 
-/* ----- MEDIA QUERIES ----- */
-@media (max-width: 1024px), (max-width: 640px) {
+/* ----- From 1024 and bigger (pc). ----- */
+@media (min-width: 1024px) {
+  .menu ul > li {
+    display: inline;
+  }
+
+  .logo a.item,
+  .menu ul > li a.item {
+    padding: 1em;
+  }
+
+  .logo a:hover,
+  .menu ul > li a:hover {
+    background-color: var(--light-grey);
+  }
+}
+
+/* ----- From 1024 and smaller (desktop). ----- */
+@media (max-width: 1024px) {
   span.btn-open,
   .menu .btn-close {
     display: block;
+  }
+
+  span.btn-open {
+    font-size: 2.5rem;
   }
 
   .menu {
@@ -147,15 +157,16 @@ span.btn-open,
   }
 
   .menu ul {
+    margin-top: 100px;
     text-align: center;
   }
 
   .menu ul a {
     display: block;
-    padding: 8px;
+    padding: 0.5em;
     transition: 0.3s;
     color: var(--light-grey);
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 
   .menu ul a:hover,
@@ -166,25 +177,37 @@ span.btn-open,
   .menu .btn-close {
     position: absolute;
     top: 0;
-    right: 45px;
-    font-size: 60px;
+    right: 0;
+    font-size: 2.5rem;
   }
 }
 
-/* ----- MOBILE ----- */
+/* ----- From 640 and smaller (mobile). ----- */
 @media (max-width: 640px) {
   .menu {
     opacity: 0.9;
   }
 
   .top-bar .btn-open {
-    font-size: 40px;
+    font-size: 2.2rem;
     cursor: pointer;
+  }
+
+  .menu ul {
+    margin-top: 100px;
+  }
+
+  .menu ul > li a {
+    font-size: 2rem;
+  }
+
+  .menu .btn-close {
+    font-size: 2.5rem;
   }
 }
 
 /*==============================================================
-  # Header Section.
+  # Banner Section.
 ==============================================================*/
 #banner {
   max-width: 1500px;
