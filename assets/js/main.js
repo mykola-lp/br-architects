@@ -1,5 +1,6 @@
 // Defines two functions: openNav() and closeNav() for full and mobile screens.
 var navMenu = document.querySelector(".menu");
+// @todo: js code for close/open btn and css fix after screen change.
 function openNavMobile() {
     navMenu.classList.add("open");
     navMenu.style.width = "100%";
