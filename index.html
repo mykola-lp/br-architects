@@ -13,34 +13,38 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   </head>
 
   <body>
-    <!-- Top Bar BEGIN -->
-    <section id="top-bar">
-      <div class="navbar">
-        <a href="#home" class="site-name"><b>BR</b> Architects</a>
-        <nav class="main-nav">
+    <!-- Top Bar (Header) BEGIN -->
+    <header class="top-bar">
+      <div class="container flex">
+        <h1 class="logo"><a href="index.html" class="item"><b>BR</b> Architects</a></h1>
+        <nav class="menu">
           <ul>
-            <li><a href="#projects" class="item-1">Projects</a></li>
-            <li><a href="#about" class="item-2">About</a></li>
-            <li><a href="#contact" class="item-3">Contact</a></li>
+            <a class="btn-close material-symbols-outlined" onclick="closeNav()">close</a>
+            <li><a href="#about" class="item">About</a></li>
+            <li><a href="#project" class="item">Projects</a></li>
+            <li><a href="#team" class="item">Team</a></li>
+            <li><a href="#contact" class="item">Contact</a></li>
           </ul>
         </nav>
+        <span class="btn-open material-symbols-outlined" onclick="openNav()">menu</span>
       </div>
-    </section>
-    <!-- Top Bar END -->
+    </header>
+    <!-- Top Bar (Header) END -->
 
-    <!-- Header BEGIN -->
-    <header id="header">
+    <!-- Banner BEGIN -->
+    <section id="banner">
       <div class="wrapper">
         <img class="site-banner" src="assets/img/architect-banner.jpg" alt="Architecture">
         <div class="branding a-centre">
           <h1><span class="br-suffix"><b>BR</b></span> <span class="br-prefix">Architects</span></h1>
         </div>
       </div>
-    </header>
-    <!-- Header END -->
+    </section>
+    <!-- Banner END -->
 
     <!-- About BEGIN -->
     <section id="about">

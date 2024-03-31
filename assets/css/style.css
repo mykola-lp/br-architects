@@ -18,13 +18,13 @@
   # General.
 ==============================================================*/
 * {
-  margin: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   font-family: "Verdana", sans-serif;
-  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -44,19 +44,18 @@ img {
   vertical-align: middle;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Segoe UI", Arial, sans-serif;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Segoe UI", "Arial", sans-serif;
   font-weight: 400;
   margin: 10px 0;
 }
 
 p {
   margin: 10px 0;
+}
+
+ul {
+  list-style-type: none;
 }
 /* @todo maybe remove ? */
 /* Alignments. */
@@ -68,48 +67,149 @@ p {
   text-align: justify;
 }
 
+/* ----- LAYOUT ----- */
+header,
+section,
+footer {
+  padding: 1.25em 0; /* font-size(= html, is parent element) = 16px, 16px * 1.25em = 20px */
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
 /*==============================================================
-  # Top Bar.
+  # Top Bar (Header).
 ==============================================================*/
-#top-bar {
+.top-bar {
   position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
   z-index: 1;
-}
-
-#top-bar .navbar {
-  padding: 10px 20px;
-  overflow: hidden;
-  letter-spacing: 4px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  color: var(--black);
   background-color: var(--white);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+              0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-#top-bar .navbar .site-name,
-#top-bar .navbar .main-nav li [class^="item-"] {
-  display: block;
-  padding: 8px 16px;
-  float: left;
+.top-bar .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.125em 0;
+  letter-spacing: 4px;
 }
 
-#top-bar .navbar .main-nav {
-  float: right;
+/* ----- Navigation. ----- */
+.menu {
+  margin-left: auto;
 }
 
-#top-bar .navbar .main-nav li {
-  display: inline;
+.logo,
+.menu ul {
+  font-size: 1rem;
 }
 
-#top-bar .navbar .site-name:hover,
-#top-bar .navbar .main-nav li [class^="item-"]:hover {
-  background-color: var(--light-grey);
+span.btn-open,
+.menu .btn-close {
+  display: none;
+}
+
+/* ----- From 1024 and bigger (pc). ----- */
+@media (min-width: 1024px) {
+  .menu ul > li {
+    display: inline;
+  }
+
+  .logo a.item,
+  .menu ul > li a.item {
+    padding: 1em;
+  }
+
+  .logo a:hover,
+  .menu ul > li a:hover {
+    background-color: var(--light-grey);
+  }
+}
+
+/* ----- From 1024 and smaller (desktop). ----- */
+@media (max-width: 1024px) {
+  span.btn-open,
+  .menu .btn-close {
+    display: block;
+  }
+
+  span.btn-open {
+    font-size: 2.5rem;
+  }
+
+  .menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--black);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .menu ul {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .menu ul a {
+    display: block;
+    padding: 0.5em;
+    transition: 0.3s;
+    color: var(--light-grey);
+    font-size: 2.25rem;
+  }
+
+  .menu ul a:hover,
+  .menu ul a:focus {
+    color: var(--white-smoke);
+  }
+
+  .menu .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2.5rem;
+  }
+}
+
+/* ----- From 640 and smaller (mobile). ----- */
+@media (max-width: 640px) {
+  .menu {
+    opacity: 0.9;
+  }
+
+  .top-bar .btn-open {
+    font-size: 2.2rem;
+    cursor: pointer;
+  }
+
+  .menu ul {
+    margin-top: 100px;
+  }
+
+  .menu ul > li a {
+    font-size: 2rem;
+  }
+
+  .menu .btn-close {
+    font-size: 2.5rem;
+  }
 }
 
 /*==============================================================
-  # Header Section.
+  # Banner Section.
 ==============================================================*/
-#header {
+#banner {
   max-width: 1500px;
   position: relative;
   margin-left: auto;
@@ -117,12 +217,12 @@ p {
   letter-spacing: 4px;
 }
 
-#header .site-banner {
+#banner .site-banner {
   max-width: 100%;
   height: auto;
 }
 
-#header .branding {
+#banner .branding {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -133,14 +233,14 @@ p {
   -moz-transform: translate(-50%,-50%);    /* Mozilla Firefox */
 }
 
-#header .branding .br-suffix {
+#banner .branding .br-suffix {
   padding: 8px 16px;
   color: var(--white);
   background-color: var(--black);
   opacity: 0.75;
 }
 
-#header .branding .br-prefix {
+#banner .branding .br-prefix {
   color: var(--white-smoke);
 }
 

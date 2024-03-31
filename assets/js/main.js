@@ -1,3 +1,50 @@
+// Defines two functions: openNav() and closeNav() for full and mobile screens.
+var navMenu = document.querySelector(".menu");
+// @todo: js code for close/open btn and css fix after screen change.
+function openNavMobile() {
+    navMenu.classList.add("open");
+    navMenu.style.width = "100%";
+}
+
+function closeNavMobile() {
+    navMenu.classList.remove("open");
+    navMenu.style.width = "0";
+}
+
+function openNavDesktop() {
+    navMenu.classList.add("open");
+    navMenu.style.width = "250px";
+    document.querySelector("body").style.marginLeft = "250px";
+}
+
+function closeNavDesktop() {
+    navMenu.classList.remove("open");
+    navMenu.style.width = "0";
+    document.querySelector("body").style.marginLeft= "0";
+}
+
+function openNav() {
+    var screenWidth = window.innerWidth;
+
+    if (screenWidth >= 641 && screenWidth <= 1024) {
+        openNavDesktop();
+    } else {
+        openNavMobile();
+    }
+}
+
+function closeNav() {
+    var screenWidth = window.innerWidth;
+
+    if (screenWidth <= 640) {
+        closeNavMobile();
+    } else {
+        closeNavDesktop();
+    }
+}
+
+// --------------------------------------------------------------------------
+
 // Find the image and popup.
 const popupImage = document.querySelector('.team-photo');
 const popup = document.getElementById('image-popup');
