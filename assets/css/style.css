@@ -209,39 +209,61 @@ span.btn-open,
 /*==============================================================
   # Banner Section.
 ==============================================================*/
-#banner {
+.banner {
   max-width: 1500px;
+  margin: 0 auto;
+}
+
+.banner .flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  letter-spacing: 4px;
 }
 
-#banner .site-banner {
-  max-width: 100%;
-  height: auto;
-}
-
-#banner .branding {
+.banner .heading {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: 16px;
   transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%); /* Safari, Chrome, Opera */
   -ms-transform: translate(-50%,-50%);     /* Internet Explorer */
   -moz-transform: translate(-50%,-50%);    /* Mozilla Firefox */
 }
 
-#banner .branding .br-suffix {
-  padding: 8px 16px;
+.heading {
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.heading .prefix {
+  font-weight: bolder;
+  padding: 0.4em;
   color: var(--white);
   background-color: var(--black);
   opacity: 0.75;
 }
 
-#banner .branding .br-prefix {
+.heading .suffix {
   color: var(--white-smoke);
+}
+
+/* ----- From 1024 and smaller (desktop). ----- */
+@media (max-width: 1024px) {
+  .banner .heading {
+    font-size: inherit;
+  }
+}
+
+/* ----- From 640 and smaller (mobile). ----- */
+@media (max-width: 640px) {
+  .banner .heading {
+    font-size: 1rem;
+  }
+
+  .heading .prefix {
+    padding: 0.3em;
+  }
 }
 
 /*==============================================================
