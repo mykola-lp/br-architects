@@ -47,8 +47,8 @@ function closeNav() {
 
 // Find the image and popup.
 const popupImage = document.querySelector('.team-photo');
-const popup = document.getElementById('image-popup');
-const popupContent = document.querySelector('.popup-content');
+const popup = document.getElementById('team-popup');
+const popupContent = document.querySelector('.team-popup-img');
 
 // When click on the image - display a popup.
 popupImage.addEventListener('click', function() {
@@ -58,7 +58,7 @@ popupImage.addEventListener('click', function() {
 
 // When click on the button to close the popup - hide it.
 popup.addEventListener('click', function(event) {
-    if (event.target === this || event.target.className === 'close') {
+    if (event.target === this || event.target.className === 'btn-close') {
         popup.style.display = 'none';
     }
 });
