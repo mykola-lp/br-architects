@@ -269,48 +269,56 @@ span.btn-open,
 /*==============================================================
   # About Section.
 ==============================================================*/
-#about {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 980px;
-  padding: 64px 10px;
+.about {
+  max-width: 1180px;
+  margin: 1.25em auto 0;
+  padding: 0 0.625em 0;
 }
 
-#about h3 {
+.about .flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-header h3,
+.about-header p:first-of-type {
+  text-align: center;
+}
+
+.about-header h3 {
+  font-size: 1.5rem;
   text-transform: uppercase;
 }
 
-#about .row-2 {
-  overflow: hidden;
+.about-header p:last-of-type,
+.about-body p,
+.about-footer p {
+  text-align: justify;
 }
 
-#about .row-2 .team-photo {
+.team-photo {
+  float: left;
+  width: 50%;
+  padding: 0.625em;
   border-radius: 4px;
-  max-width: 100%;
-  height: auto;
   opacity: 1;
 }
 
-#about .row-2 .team-photo:hover {
-  opacity: 0.60;
+.team-photo:hover {
+  opacity: 0.6;
 }
 
-#about .row-2 [class^="col-"] {
-  width: 50%;
-  float: left;
-  padding: 10px;
+.about-body .text {
+  float: right;
+  width: 48%;
+  margin-left: 2%;
 }
 
-#about .row-2 .col-2 {
-  padding-top: 0;
-  padding-right: 0;
-}
-
-/* Popup for team photo */
-#about .popup {
+/* ----- Popup for team photo. ----- */
+.about .team-popup {
   display: none;
   position: fixed;
-  z-index: 9999;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
@@ -319,21 +327,35 @@ span.btn-open,
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-#about .popup-content {
+.team-popup .team-popup-img {
   display: block;
-  margin: 50px auto;
+  margin: 3.125em auto;
   max-width: 80%;
   max-height: 80%;
 }
 
-#about .close {
+.team-popup .btn-close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 2%;
+  right: 3%;
   color: var(--white);
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* ----- From 1024 and smaller (desktop). ----- */
+@media (max-width: 1024px) {
+  .team-photo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    width: 65%;
+  }
+
+  .about-body .text {
+    width: 100%;
+  }
 }
 
 /*==============================================================
